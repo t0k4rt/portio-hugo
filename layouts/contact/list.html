@@ -54,7 +54,7 @@
               <img src="{{ "images/contact/location.svg" | absURL }}" alt="location" />
             </div>
           </div>
-          <h4>Office Address</h4>
+          <h4>Adresse</h4>
           <p>
             {{ $address.address }}
           </p>
@@ -74,13 +74,15 @@
               <img src="{{ "images/contact/phone.svg" | absURL }}" alt="phone" />
             </div>
           </div>
-          <h4>Phone & Email</h4>
+          <h4>Téléphone & Email</h4>
           <p>{{ $address.phone }}<br>
             <a href="mailto:{{ $address.email }}">{{ $address.email }}</a>
           </p>
 
         </div>
       </div>
+
+      {{ with $address.openingHours }}
       <div class="col-lg-4">
         <div class="contact__info_item">
           <div class="contact__info_item-icon">
@@ -101,6 +103,7 @@
           </p>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
